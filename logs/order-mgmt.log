@@ -1,0 +1,988 @@
+2025-11-22T14:18:21.513+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 2036 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:18:21.517+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:18:22.553+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:18:22.680+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interface.
+2025-11-22T14:18:23.300+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:18:23.404+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-22T14:18:23.437+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:18:23.723+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:18:23.750+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:18:23.897+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:18:23.899+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:18:24.672+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:18:24.727+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:18:25.885+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-11-22T14:18:26.379+05:30  WARN 2036 --- [order-mgmt] [main] [                                                 ] r.c.GenericReactiveWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mutableSpanBytesEncoder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/tracing/zipkin/ZipkinConfigurations$BraveConfiguration.class]: Failed to instantiate [zipkin2.reporter.BytesEncoder]: Factory method 'mutableSpanBytesEncoder' threw exception with message: zipkin2/reporter/brave/MutableSpanBytesEncoder
+2025-11-22T14:18:26.381+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:18:26.385+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:18:26.388+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:18:26.399+05:30  INFO 2036 --- [order-mgmt] [main] [                                                 ] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-22T14:18:26.422+05:30 ERROR 2036 --- [order-mgmt] [main] [                                                 ] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mutableSpanBytesEncoder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/tracing/zipkin/ZipkinConfigurations$BraveConfiguration.class]: Failed to instantiate [zipkin2.reporter.BytesEncoder]: Factory method 'mutableSpanBytesEncoder' threw exception with message: zipkin2/reporter/brave/MutableSpanBytesEncoder
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.3.jar:3.2.3]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [zipkin2.reporter.BytesEncoder]: Factory method 'mutableSpanBytesEncoder' threw exception with message: zipkin2/reporter/brave/MutableSpanBytesEncoder
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 97 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: zipkin2/reporter/brave/MutableSpanBytesEncoder
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinConfigurations$BraveConfiguration.mutableSpanBytesEncoder(ZipkinConfigurations.java:184) ~[spring-boot-actuator-autoconfigure-3.3.4.jar:3.3.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 98 common frames omitted
+Caused by: java.lang.ClassNotFoundException: zipkin2.reporter.brave.MutableSpanBytesEncoder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	... 102 common frames omitted
+
+2025-11-22T14:18:26.435+05:30  WARN 2036 --- [order-mgmt] [main] [                                                 ] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener] to prepare test instance [src.main.java.com.ewallet.order.OrderMgmtApplicationTests@245b009a]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext for [ReactiveWebMergedContextConfiguration@7227e3f1 testClass = src.main.java.com.ewallet.order.OrderMgmtApplicationTests, locations = [], classes = [src.main.java.com.ewallet.order.OrderMgmtApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7098b907, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3bcd05cb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@1a5b6f42, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@4b8729ff, org.springframework.boot.test.web.reactor.netty.DisableReactorResourceFactoryGlobalResourcesContextCustomizerFactory$DisableReactorResourceFactoryGlobalResourcesContextCustomizerCustomizer@16612a51, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@70e38ce1, org.springframework.boot.test.context.SpringBootTestAnnotation@321892a6], contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:142) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:98) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:260) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:163) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$10(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:383) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$11(ClassBasedTestDescriptor.java:378) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179) ~[na:na]
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1708) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:310) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
+	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:762) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:377) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$6(ClassBasedTestDescriptor.java:290) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:289) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$4(ClassBasedTestDescriptor.java:279) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$5(ClassBasedTestDescriptor.java:278) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:106) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:105) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:69) ~[junit-jupiter-engine-5.10.3.jar:5.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$2(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:123) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:90) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[na:na]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) ~[junit-platform-launcher-1.10.3.jar:1.10.3]
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122) ~[surefire-junit-platform-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385) ~[surefire-booter-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162) ~[surefire-booter-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507) ~[surefire-booter-3.2.3.jar:3.2.3]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495) ~[surefire-booter-3.2.3.jar:3.2.3]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mutableSpanBytesEncoder' defined in class path resource [org/springframework/boot/actuate/autoconfigure/tracing/zipkin/ZipkinConfigurations$BraveConfiguration.class]: Failed to instantiate [zipkin2.reporter.BytesEncoder]: Factory method 'mutableSpanBytesEncoder' threw exception with message: zipkin2/reporter/brave/MutableSpanBytesEncoder
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1355) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1185) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.lambda$loadContext$3(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:58) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.util.function.ThrowingSupplier.get(ThrowingSupplier.java:46) ~[spring-core-6.1.13.jar:6.1.13]
+	at org.springframework.boot.SpringApplication.withHook(SpringApplication.java:1463) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader$ContextLoaderHook.run(SpringBootContextLoader.java:553) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:137) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:108) ~[spring-boot-test-3.3.4.jar:3.3.4]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:225) ~[spring-test-6.1.13.jar:6.1.13]
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:152) ~[spring-test-6.1.13.jar:6.1.13]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [zipkin2.reporter.BytesEncoder]: Factory method 'mutableSpanBytesEncoder' threw exception with message: zipkin2/reporter/brave/MutableSpanBytesEncoder
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:178) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 97 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: zipkin2/reporter/brave/MutableSpanBytesEncoder
+	at org.springframework.boot.actuate.autoconfigure.tracing.zipkin.ZipkinConfigurations$BraveConfiguration.mutableSpanBytesEncoder(ZipkinConfigurations.java:184) ~[spring-boot-actuator-autoconfigure-3.3.4.jar:3.3.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 98 common frames omitted
+Caused by: java.lang.ClassNotFoundException: zipkin2.reporter.brave.MutableSpanBytesEncoder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	... 102 common frames omitted
+
+2025-11-22T14:19:37.618+05:30  INFO 7372 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 7372 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:19:37.620+05:30  INFO 7372 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:19:38.637+05:30  INFO 7372 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:19:38.760+05:30  INFO 7372 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interface.
+2025-11-22T14:19:39.488+05:30  INFO 7372 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:19:39.561+05:30  INFO 7372 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:19:39.596+05:30  INFO 7372 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:19:39.815+05:30  INFO 7372 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:19:39.842+05:30  INFO 7372 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:19:39.994+05:30  INFO 7372 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:19:39.995+05:30  INFO 7372 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:19:40.780+05:30  INFO 7372 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:19:40.833+05:30  INFO 7372 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:19:41.875+05:30  WARN 7372 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:19:42.744+05:30  INFO 7372 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:19:42.794+05:30  INFO 7372 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:19:42.879+05:30  INFO 7372 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.56 seconds (process running for 6.825)
+2025-11-22T14:19:43.545+05:30  INFO 7372 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:19:43.547+05:30  INFO 7372 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:19:43.550+05:30  INFO 7372 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:23:08.132+05:30  INFO 18424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 18424 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:23:08.135+05:30  INFO 18424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:23:09.136+05:30  INFO 18424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:23:09.269+05:30  INFO 18424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interface.
+2025-11-22T14:23:09.986+05:30  INFO 18424 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:23:10.049+05:30  INFO 18424 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:23:10.081+05:30  INFO 18424 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:23:10.302+05:30  INFO 18424 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:23:10.326+05:30  INFO 18424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:23:10.482+05:30  INFO 18424 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:23:10.483+05:30  INFO 18424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:23:11.254+05:30  INFO 18424 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:23:11.305+05:30  INFO 18424 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:23:12.256+05:30  WARN 18424 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:23:13.110+05:30  INFO 18424 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:23:13.166+05:30  INFO 18424 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:23:13.281+05:30  INFO 18424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.463 seconds (process running for 6.39)
+2025-11-22T14:23:13.924+05:30  INFO 18424 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:23:13.927+05:30  INFO 18424 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:23:13.930+05:30  INFO 18424 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:24:45.141+05:30  INFO 1544 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 1544 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:24:45.144+05:30  INFO 1544 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:24:46.056+05:30  INFO 1544 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:24:46.181+05:30  INFO 1544 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interface.
+2025-11-22T14:24:46.951+05:30  INFO 1544 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-22T14:24:46.963+05:30  INFO 1544 --- [order-mgmt] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T14:24:46.963+05:30  INFO 1544 --- [order-mgmt] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-11-22T14:24:47.029+05:30  INFO 1544 --- [order-mgmt] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T14:24:47.029+05:30  INFO 1544 --- [order-mgmt] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1843 ms
+2025-11-22T14:24:47.185+05:30  INFO 1544 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:24:47.363+05:30  INFO 1544 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:24:47.365+05:30  INFO 1544 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:24:47.376+05:30  INFO 1544 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:24:47.661+05:30  INFO 1544 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:24:47.744+05:30  INFO 1544 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:24:47.782+05:30  INFO 1544 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:24:47.964+05:30  INFO 1544 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:24:48.662+05:30  INFO 1544 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:24:48.710+05:30  INFO 1544 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:24:49.336+05:30  WARN 1544 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:24:50.045+05:30  INFO 1544 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:24:50.122+05:30  INFO 1544 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-11-22T14:24:50.136+05:30  INFO 1544 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.438 seconds (process running for 5.806)
+2025-11-22T14:26:08.643+05:30  INFO 1544 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:26:08.645+05:30  INFO 1544 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:26:08.648+05:30  INFO 1544 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:26:27.517+05:30  INFO 2600 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 2600 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:26:27.518+05:30  INFO 2600 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:26:28.843+05:30  INFO 2600 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:26:28.986+05:30  INFO 2600 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interface.
+2025-11-22T14:26:29.919+05:30  INFO 2600 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:26:29.993+05:30  INFO 2600 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:26:30.020+05:30  INFO 2600 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:26:30.248+05:30  INFO 2600 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:26:30.280+05:30  INFO 2600 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:26:30.435+05:30  INFO 2600 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:26:30.437+05:30  INFO 2600 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:26:31.331+05:30  INFO 2600 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:26:31.384+05:30  INFO 2600 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:26:32.615+05:30  WARN 2600 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:26:33.691+05:30  INFO 2600 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:26:33.746+05:30  INFO 2600 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:26:33.831+05:30  INFO 2600 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 6.677 seconds (process running for 7.786)
+2025-11-22T14:26:34.526+05:30  INFO 2600 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:26:34.528+05:30  INFO 2600 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:26:34.533+05:30  INFO 2600 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:27:41.600+05:30  INFO 13780 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 13780 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:27:41.602+05:30  INFO 13780 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:27:42.822+05:30  INFO 13780 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:27:42.946+05:30  INFO 13780 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 115 ms. Found 1 JPA repository interface.
+2025-11-22T14:27:43.855+05:30  INFO 13780 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:27:43.940+05:30  INFO 13780 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:27:43.976+05:30  INFO 13780 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:27:44.212+05:30  INFO 13780 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:27:44.241+05:30  INFO 13780 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:27:44.401+05:30  INFO 13780 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:27:44.402+05:30  INFO 13780 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:27:45.348+05:30  INFO 13780 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:27:45.403+05:30  INFO 13780 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:27:46.659+05:30  WARN 13780 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:27:47.804+05:30  INFO 13780 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:27:47.870+05:30  INFO 13780 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:27:47.957+05:30  INFO 13780 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 6.728 seconds (process running for 7.781)
+2025-11-22T14:27:48.675+05:30  INFO 13780 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:27:48.678+05:30  INFO 13780 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:27:48.680+05:30  INFO 13780 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:29:36.420+05:30  INFO 9696 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 9696 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:29:36.423+05:30  INFO 9696 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:29:37.441+05:30  INFO 9696 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:29:37.556+05:30  INFO 9696 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2025-11-22T14:29:38.299+05:30  INFO 9696 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:29:38.384+05:30  INFO 9696 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:29:38.411+05:30  INFO 9696 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:29:38.614+05:30  INFO 9696 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:29:38.637+05:30  INFO 9696 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:29:38.782+05:30  INFO 9696 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:29:38.783+05:30  INFO 9696 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:29:39.535+05:30  INFO 9696 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:29:39.587+05:30  INFO 9696 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:29:40.546+05:30  WARN 9696 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:29:41.488+05:30  INFO 9696 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:29:41.542+05:30  INFO 9696 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:29:41.606+05:30  INFO 9696 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.511 seconds (process running for 6.437)
+2025-11-22T14:29:42.196+05:30  INFO 9696 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:29:42.198+05:30  INFO 9696 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:29:42.200+05:30  INFO 9696 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:32:02.469+05:30  INFO 9424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 9424 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:32:02.475+05:30  INFO 9424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:32:03.774+05:30  INFO 9424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:32:03.913+05:30  INFO 9424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 1 JPA repository interface.
+2025-11-22T14:32:04.922+05:30  INFO 9424 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:32:05.029+05:30  INFO 9424 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:32:05.066+05:30  INFO 9424 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:32:05.289+05:30  INFO 9424 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:32:05.312+05:30  INFO 9424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:32:05.470+05:30  INFO 9424 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:32:05.471+05:30  INFO 9424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:32:06.337+05:30  INFO 9424 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:32:06.395+05:30  INFO 9424 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:32:07.711+05:30  WARN 9424 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:32:08.935+05:30  INFO 9424 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:32:09.001+05:30  INFO 9424 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:32:09.092+05:30  INFO 9424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 6.996 seconds (process running for 8.019)
+2025-11-22T14:32:09.735+05:30  INFO 9424 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:32:09.737+05:30  INFO 9424 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:32:09.739+05:30  INFO 9424 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:34:20.499+05:30  INFO 17468 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 17468 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:34:20.503+05:30  INFO 17468 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:34:21.520+05:30  INFO 17468 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:34:21.640+05:30  INFO 17468 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interface.
+2025-11-22T14:34:22.380+05:30  INFO 17468 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:34:22.473+05:30  INFO 17468 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:34:22.505+05:30  INFO 17468 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:34:22.719+05:30  INFO 17468 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:34:22.740+05:30  INFO 17468 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:34:22.880+05:30  INFO 17468 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:34:22.881+05:30  INFO 17468 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:34:23.669+05:30  INFO 17468 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:34:23.728+05:30  INFO 17468 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:34:24.684+05:30  WARN 17468 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:34:25.586+05:30  INFO 17468 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:34:25.640+05:30  INFO 17468 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:34:25.703+05:30  INFO 17468 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.531 seconds (process running for 6.464)
+2025-11-22T14:34:26.288+05:30  INFO 17468 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:34:26.290+05:30  INFO 17468 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:34:26.294+05:30  INFO 17468 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:35:48.724+05:30  INFO 28104 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 28104 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:35:48.731+05:30  INFO 28104 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:35:49.767+05:30  INFO 28104 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:35:49.887+05:30  INFO 28104 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2025-11-22T14:35:50.731+05:30  INFO 28104 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-22T14:35:50.748+05:30  INFO 28104 --- [order-mgmt] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T14:35:50.748+05:30  INFO 28104 --- [order-mgmt] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-11-22T14:35:50.830+05:30  INFO 28104 --- [order-mgmt] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T14:35:50.831+05:30  INFO 28104 --- [order-mgmt] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2059 ms
+2025-11-22T14:35:51.005+05:30  INFO 28104 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:35:51.216+05:30  INFO 28104 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:35:51.218+05:30  INFO 28104 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:35:51.230+05:30  INFO 28104 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:35:51.466+05:30  INFO 28104 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:35:51.540+05:30  INFO 28104 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:35:51.580+05:30  INFO 28104 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:35:51.834+05:30  INFO 28104 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:35:52.564+05:30  INFO 28104 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:35:52.615+05:30  INFO 28104 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:35:53.337+05:30  WARN 28104 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:35:54.167+05:30  INFO 28104 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:35:54.253+05:30  INFO 28104 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-11-22T14:35:54.264+05:30  INFO 28104 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.0 seconds (process running for 6.636)
+2025-11-22T14:41:55.407+05:30  INFO 28104 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:41:55.409+05:30  INFO 28104 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:41:55.411+05:30  INFO 28104 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:54:22.836+05:30  INFO 3412 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 3412 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:54:22.841+05:30  INFO 3412 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:54:23.825+05:30  INFO 3412 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:54:23.944+05:30  INFO 3412 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2025-11-22T14:54:24.669+05:30  INFO 3412 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:54:24.730+05:30  INFO 3412 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:54:24.757+05:30  INFO 3412 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:54:24.961+05:30  INFO 3412 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:54:24.985+05:30  INFO 3412 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:54:25.121+05:30  INFO 3412 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:54:25.123+05:30  INFO 3412 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:54:25.870+05:30  INFO 3412 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:54:25.922+05:30  INFO 3412 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:54:26.923+05:30  WARN 3412 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:54:27.829+05:30  INFO 3412 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:54:27.886+05:30  INFO 3412 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:54:27.953+05:30  INFO 3412 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.426 seconds (process running for 6.333)
+2025-11-22T14:54:28.523+05:30  INFO 3412 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:54:28.524+05:30  INFO 3412 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:54:28.526+05:30  INFO 3412 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:54:35.962+05:30  INFO 5036 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 5036 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:54:35.969+05:30  INFO 5036 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:54:36.999+05:30  INFO 5036 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:54:37.107+05:30  INFO 5036 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2025-11-22T14:54:37.961+05:30  INFO 5036 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-22T14:54:37.973+05:30  INFO 5036 --- [order-mgmt] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T14:54:37.973+05:30  INFO 5036 --- [order-mgmt] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-11-22T14:54:38.038+05:30  INFO 5036 --- [order-mgmt] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T14:54:38.039+05:30  INFO 5036 --- [order-mgmt] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2028 ms
+2025-11-22T14:54:38.222+05:30  INFO 5036 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:54:38.417+05:30  INFO 5036 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:54:38.420+05:30  INFO 5036 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:54:38.441+05:30  INFO 5036 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:54:38.742+05:30  INFO 5036 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:54:38.845+05:30  INFO 5036 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:54:38.899+05:30  INFO 5036 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:54:39.180+05:30  INFO 5036 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:54:39.960+05:30  INFO 5036 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:54:40.017+05:30  INFO 5036 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:54:40.821+05:30  WARN 5036 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:54:41.852+05:30  INFO 5036 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:54:41.951+05:30  INFO 5036 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-11-22T14:54:41.966+05:30  INFO 5036 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.439 seconds (process running for 6.809)
+2025-11-22T14:55:27.555+05:30  INFO 5036 --- [order-mgmt] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-22T14:55:27.556+05:30  INFO 5036 --- [order-mgmt] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-22T14:55:27.557+05:30  INFO 5036 --- [order-mgmt] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-22T14:57:21.633+05:30  INFO 5036 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:57:21.635+05:30  INFO 5036 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:57:21.637+05:30  INFO 5036 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:57:26.026+05:30  INFO 13204 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 13204 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:57:26.033+05:30  INFO 13204 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:57:27.037+05:30  INFO 13204 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:57:27.146+05:30  INFO 13204 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interface.
+2025-11-22T14:57:28.140+05:30  INFO 13204 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-22T14:57:28.155+05:30  INFO 13204 --- [order-mgmt] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T14:57:28.155+05:30  INFO 13204 --- [order-mgmt] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-11-22T14:57:28.235+05:30  INFO 13204 --- [order-mgmt] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T14:57:28.236+05:30  INFO 13204 --- [order-mgmt] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2163 ms
+2025-11-22T14:57:28.452+05:30  INFO 13204 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:57:28.693+05:30  INFO 13204 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:57:28.695+05:30  INFO 13204 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:57:28.722+05:30  INFO 13204 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:57:29.057+05:30  INFO 13204 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:57:29.173+05:30  INFO 13204 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:57:29.230+05:30  INFO 13204 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:57:29.570+05:30  INFO 13204 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:57:30.337+05:30  INFO 13204 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:57:30.389+05:30  INFO 13204 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:57:31.183+05:30  WARN 13204 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:57:32.177+05:30  INFO 13204 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:57:32.271+05:30  INFO 13204 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-11-22T14:57:32.287+05:30  INFO 13204 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.71 seconds (process running for 7.082)
+2025-11-22T14:57:39.037+05:30  INFO 13204 --- [order-mgmt] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-22T14:57:39.037+05:30  INFO 13204 --- [order-mgmt] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-22T14:57:39.039+05:30  INFO 13204 --- [order-mgmt] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-22T14:58:28.472+05:30  INFO 13204 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:58:28.474+05:30  INFO 13204 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T14:58:28.477+05:30  INFO 13204 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T14:58:31.986+05:30  INFO 17292 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 17292 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T14:58:31.991+05:30  INFO 17292 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T14:58:32.993+05:30  INFO 17292 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T14:58:33.105+05:30  INFO 17292 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 1 JPA repository interface.
+2025-11-22T14:58:33.960+05:30  INFO 17292 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-11-22T14:58:33.975+05:30  INFO 17292 --- [order-mgmt] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-22T14:58:33.976+05:30  INFO 17292 --- [order-mgmt] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2025-11-22T14:58:34.055+05:30  INFO 17292 --- [order-mgmt] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-22T14:58:34.055+05:30  INFO 17292 --- [order-mgmt] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2027 ms
+2025-11-22T14:58:34.240+05:30  INFO 17292 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T14:58:34.452+05:30  INFO 17292 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T14:58:34.454+05:30  INFO 17292 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T14:58:34.464+05:30  INFO 17292 --- [order-mgmt] [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ewalletdb'
+2025-11-22T14:58:34.754+05:30  INFO 17292 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T14:58:34.858+05:30  INFO 17292 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T14:58:34.899+05:30  INFO 17292 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T14:58:35.099+05:30  INFO 17292 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T14:58:35.788+05:30  INFO 17292 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T14:58:35.834+05:30  INFO 17292 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T14:58:36.523+05:30  WARN 17292 --- [order-mgmt] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-22T14:58:37.387+05:30  INFO 17292 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T14:58:37.497+05:30  INFO 17292 --- [order-mgmt] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path ''
+2025-11-22T14:58:37.508+05:30  INFO 17292 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.97 seconds (process running for 6.334)
+2025-11-22T14:58:41.369+05:30  INFO 17292 --- [order-mgmt] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-22T14:58:41.369+05:30  INFO 17292 --- [order-mgmt] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-22T14:58:41.370+05:30  INFO 17292 --- [order-mgmt] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-11-22T15:01:26.746+05:30  INFO 17292 --- [order-mgmt] [http-nio-8081-exec-5] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xf20x010x000x060xee0x030x030xaf9p)0xe70xba0xfe/Bu0x90s0xb50xb10x0ci0xa70xd50xde0x950x020xc60xc90xd4EMx0xdc0xf10x140x100x85 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-11-22T15:01:26.792+05:30  INFO 17292 --- [order-mgmt] [http-nio-8081-exec-8] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x060xb20x010x000x060xae0x030x03R0xf9E0xcd0xee0x990x94l0xc70xaa^0xc7XDS0xa00x0b0x0at0xc60x1d,|0xc70xe50xd5u0x9d0xa5/(W ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:407) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:264) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.18.jar:10.1.18]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2025-11-22T15:02:16.037+05:30  INFO 17292 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T15:02:16.039+05:30  INFO 17292 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T15:02:16.041+05:30  INFO 17292 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T15:02:28.645+05:30  INFO 3424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 3424 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T15:02:28.652+05:30  INFO 3424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T15:02:29.580+05:30  INFO 3424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T15:02:29.698+05:30  INFO 3424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interface.
+2025-11-22T15:02:30.342+05:30  INFO 3424 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T15:02:30.407+05:30  INFO 3424 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T15:02:30.436+05:30  INFO 3424 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T15:02:30.671+05:30  INFO 3424 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T15:02:30.694+05:30  INFO 3424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T15:02:30.825+05:30  INFO 3424 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T15:02:30.827+05:30  INFO 3424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T15:02:31.573+05:30  INFO 3424 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T15:02:31.625+05:30  INFO 3424 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T15:02:32.847+05:30  INFO 3424 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T15:02:33.400+05:30  INFO 3424 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.059 seconds (process running for 5.957)
+2025-11-22T15:02:33.884+05:30  INFO 3424 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T15:02:33.886+05:30  INFO 3424 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T15:02:33.888+05:30  INFO 3424 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T15:02:43.005+05:30  INFO 28012 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 28012 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T15:02:43.010+05:30  INFO 28012 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T15:02:44.160+05:30  INFO 28012 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T15:02:44.289+05:30  INFO 28012 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interface.
+2025-11-22T15:02:45.186+05:30  INFO 28012 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T15:02:45.271+05:30  INFO 28012 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T15:02:45.330+05:30  INFO 28012 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T15:02:45.675+05:30  INFO 28012 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T15:02:45.699+05:30  INFO 28012 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T15:02:45.884+05:30  INFO 28012 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T15:02:45.886+05:30  INFO 28012 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T15:02:46.717+05:30  INFO 28012 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T15:02:46.771+05:30  INFO 28012 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T15:02:48.193+05:30  INFO 28012 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T15:02:49.008+05:30  INFO 28012 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T15:02:49.022+05:30  INFO 28012 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.554 seconds (process running for 7.038)
+2025-11-22T15:03:04.388+05:30  INFO 28012 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 439 ms
+2025-11-22T15:10:37.186+05:30  INFO 11896 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 11896 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T15:10:37.189+05:30  INFO 11896 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T15:10:38.166+05:30  INFO 11896 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T15:10:38.275+05:30  INFO 11896 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 1 JPA repository interface.
+2025-11-22T15:10:39.016+05:30  INFO 11896 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T15:10:39.090+05:30  INFO 11896 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T15:10:39.127+05:30  INFO 11896 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T15:10:39.360+05:30  INFO 11896 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T15:10:39.381+05:30  INFO 11896 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T15:10:39.524+05:30  INFO 11896 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T15:10:39.526+05:30  INFO 11896 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T15:10:40.494+05:30  INFO 11896 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T15:10:40.577+05:30  INFO 11896 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T15:10:42.032+05:30  INFO 11896 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T15:10:42.830+05:30  INFO 11896 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T15:10:42.842+05:30  INFO 11896 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.088 seconds (process running for 6.443)
+2025-11-22T15:10:51.096+05:30  INFO 11896 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 483 ms
+2025-11-22T16:00:30.543+05:30  INFO 27652 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 27652 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:00:30.549+05:30  INFO 27652 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:00:31.656+05:30  INFO 27652 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:00:31.770+05:30  INFO 27652 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
+2025-11-22T16:00:32.422+05:30  INFO 27652 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:00:32.485+05:30  INFO 27652 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:00:32.517+05:30  INFO 27652 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:00:32.750+05:30  INFO 27652 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:00:32.775+05:30  INFO 27652 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:00:32.915+05:30  INFO 27652 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:00:32.917+05:30  INFO 27652 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:00:33.770+05:30  INFO 27652 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:00:33.828+05:30  INFO 27652 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:00:35.110+05:30  INFO 27652 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:00:35.713+05:30  INFO 27652 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.502 seconds (process running for 6.415)
+2025-11-22T16:00:36.220+05:30  INFO 27652 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:00:36.223+05:30  INFO 27652 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:00:36.226+05:30  INFO 27652 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:07:36.958+05:30  INFO 25796 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 25796 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:07:36.963+05:30  INFO 25796 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:07:37.902+05:30  INFO 25796 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:07:38.023+05:30  INFO 25796 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 JPA repository interface.
+2025-11-22T16:07:38.625+05:30  INFO 25796 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:07:38.692+05:30  INFO 25796 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:07:38.726+05:30  INFO 25796 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:07:38.971+05:30  INFO 25796 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:07:38.996+05:30  INFO 25796 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:07:39.133+05:30  INFO 25796 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:07:39.135+05:30  INFO 25796 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:07:39.940+05:30  INFO 25796 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:07:39.994+05:30  INFO 25796 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:07:41.341+05:30  INFO 25796 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:07:41.861+05:30  INFO 25796 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.218 seconds (process running for 6.113)
+2025-11-22T16:07:42.352+05:30  INFO 25796 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:07:42.354+05:30  INFO 25796 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:07:42.357+05:30  INFO 25796 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:09:08.024+05:30  INFO 4056 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 4056 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:09:08.029+05:30  INFO 4056 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:09:08.974+05:30  INFO 4056 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:09:09.085+05:30  INFO 4056 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2025-11-22T16:09:09.865+05:30  INFO 4056 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:09:09.939+05:30  INFO 4056 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:09:09.977+05:30  INFO 4056 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:09:10.184+05:30  INFO 4056 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:09:10.203+05:30  INFO 4056 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:09:10.342+05:30  INFO 4056 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:09:10.345+05:30  INFO 4056 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:09:11.070+05:30  INFO 4056 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:09:11.119+05:30  INFO 4056 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:09:12.279+05:30  INFO 4056 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:09:13.039+05:30  INFO 4056 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:09:13.051+05:30  INFO 4056 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.473 seconds (process running for 5.845)
+2025-11-22T16:09:34.300+05:30  INFO 4056 --- [order-mgmt] [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 481 ms
+2025-11-22T16:09:42.176+05:30  INFO 4056 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 138 ms
+2025-11-22T16:22:24.235+05:30  INFO 30132 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 30132 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:22:24.240+05:30  INFO 30132 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:22:25.184+05:30  INFO 30132 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:22:25.302+05:30  INFO 30132 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2025-11-22T16:22:25.914+05:30  INFO 30132 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:22:25.975+05:30  INFO 30132 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:22:26.004+05:30  INFO 30132 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:22:26.236+05:30  INFO 30132 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:22:26.259+05:30  INFO 30132 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:22:26.400+05:30  INFO 30132 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:22:26.402+05:30  INFO 30132 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:22:27.196+05:30  INFO 30132 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:22:27.252+05:30  INFO 30132 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:22:28.614+05:30  INFO 30132 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:22:29.218+05:30  INFO 30132 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.284 seconds (process running for 6.171)
+2025-11-22T16:22:29.694+05:30  INFO 30132 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:22:29.697+05:30  INFO 30132 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:22:29.700+05:30  INFO 30132 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:22:38.268+05:30  INFO 19568 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 19568 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:22:38.274+05:30  INFO 19568 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:22:39.414+05:30  INFO 19568 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:22:39.539+05:30  INFO 19568 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2025-11-22T16:22:40.504+05:30  INFO 19568 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:22:40.590+05:30  INFO 19568 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:22:40.637+05:30  INFO 19568 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:22:40.862+05:30  INFO 19568 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:22:40.883+05:30  INFO 19568 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:22:41.022+05:30  INFO 19568 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:22:41.023+05:30  INFO 19568 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:22:41.871+05:30  INFO 19568 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:22:41.925+05:30  INFO 19568 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:22:43.147+05:30  INFO 19568 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:22:43.831+05:30  INFO 19568 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:22:43.841+05:30  INFO 19568 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.066 seconds (process running for 6.429)
+2025-11-22T16:22:48.319+05:30  INFO 19568 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 519 ms
+2025-11-22T16:23:31.830+05:30  INFO 19416 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 19416 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:23:31.834+05:30  INFO 19416 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:23:32.752+05:30  INFO 19416 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:23:32.884+05:30  INFO 19416 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interface.
+2025-11-22T16:23:33.638+05:30  INFO 19416 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:23:33.696+05:30  INFO 19416 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:23:33.733+05:30  INFO 19416 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:23:33.975+05:30  INFO 19416 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:23:34.000+05:30  INFO 19416 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:23:34.146+05:30  INFO 19416 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:23:34.147+05:30  INFO 19416 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:23:34.916+05:30  INFO 19416 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:23:34.969+05:30  INFO 19416 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:23:36.196+05:30  INFO 19416 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:23:36.888+05:30  INFO 19416 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:23:36.901+05:30  INFO 19416 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.535 seconds (process running for 5.989)
+2025-11-22T16:27:05.155+05:30  WARN 19416 --- [order-mgmt] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m21s99ms557µs700ns).
+2025-11-22T16:28:07.789+05:30  WARN 19416 --- [order-mgmt] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m2s633ms156µs200ns).
+2025-11-22T16:28:19.691+05:30  INFO 3144 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 3144 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:28:19.698+05:30  INFO 3144 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:28:20.840+05:30  INFO 3144 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:28:20.960+05:30  INFO 3144 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interface.
+2025-11-22T16:28:21.768+05:30  INFO 3144 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:28:21.831+05:30  INFO 3144 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:28:21.872+05:30  INFO 3144 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:28:22.152+05:30  INFO 3144 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:28:22.178+05:30  INFO 3144 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:28:22.338+05:30  INFO 3144 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:28:22.339+05:30  INFO 3144 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:28:23.116+05:30  INFO 3144 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:28:23.169+05:30  INFO 3144 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:28:24.400+05:30  INFO 3144 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:28:25.168+05:30  INFO 3144 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:28:25.180+05:30  INFO 3144 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.051 seconds (process running for 6.602)
+2025-11-22T16:28:34.208+05:30  INFO 3144 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 525 ms
+2025-11-22T16:29:36.711+05:30  INFO 29872 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 29872 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:29:36.717+05:30  INFO 29872 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:29:37.644+05:30  INFO 29872 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:29:37.768+05:30  INFO 29872 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 1 JPA repository interface.
+2025-11-22T16:29:38.519+05:30  INFO 29872 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:29:38.581+05:30  INFO 29872 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:29:38.620+05:30  INFO 29872 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:29:38.870+05:30  INFO 29872 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:29:38.905+05:30  INFO 29872 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:29:39.063+05:30  INFO 29872 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:29:39.064+05:30  INFO 29872 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:29:39.838+05:30  INFO 29872 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:29:39.894+05:30  INFO 29872 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:29:41.128+05:30  INFO 29872 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:29:41.864+05:30  INFO 29872 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:29:41.875+05:30  INFO 29872 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.622 seconds (process running for 6.065)
+2025-11-22T16:29:49.017+05:30  INFO 29872 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 506 ms
+2025-11-22T16:32:16.650+05:30  WARN 29872 --- [order-mgmt] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m7s482ms243µs200ns).
+2025-11-22T16:32:45.427+05:30  INFO 31436 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 31436 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:32:45.435+05:30  INFO 31436 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:32:46.648+05:30  INFO 31436 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:32:46.785+05:30  INFO 31436 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interface.
+2025-11-22T16:32:47.678+05:30  INFO 31436 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:32:47.750+05:30  INFO 31436 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:32:47.804+05:30  INFO 31436 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:32:48.109+05:30  INFO 31436 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:32:48.135+05:30  INFO 31436 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:32:48.307+05:30  INFO 31436 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:32:48.309+05:30  INFO 31436 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:32:49.147+05:30  INFO 31436 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:32:49.203+05:30  INFO 31436 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:32:50.531+05:30  INFO 31436 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:32:51.769+05:30  INFO 31436 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:32:51.781+05:30  INFO 31436 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.908 seconds (process running for 7.481)
+2025-11-22T16:33:01.393+05:30  INFO 31436 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 516 ms
+2025-11-22T16:33:31.292+05:30  INFO 29916 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 29916 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:33:31.297+05:30  INFO 29916 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:33:32.250+05:30  INFO 29916 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:33:32.367+05:30  INFO 29916 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interface.
+2025-11-22T16:33:33.029+05:30  INFO 29916 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:33:33.096+05:30  INFO 29916 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:33:33.125+05:30  INFO 29916 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:33:33.359+05:30  INFO 29916 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:33:33.381+05:30  INFO 29916 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:33:33.518+05:30  INFO 29916 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:33:33.519+05:30  INFO 29916 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:33:34.334+05:30  INFO 29916 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:33:34.386+05:30  INFO 29916 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:33:35.648+05:30  INFO 29916 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:33:36.185+05:30  INFO 29916 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.2 seconds (process running for 6.126)
+2025-11-22T16:33:36.712+05:30  INFO 29916 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:33:36.714+05:30  INFO 29916 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:33:36.717+05:30  INFO 29916 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:34:25.091+05:30  INFO 29824 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 29824 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:34:25.098+05:30  INFO 29824 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:34:26.188+05:30  INFO 29824 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:34:26.312+05:30  INFO 29824 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interface.
+2025-11-22T16:34:27.111+05:30  INFO 29824 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:34:27.192+05:30  INFO 29824 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:34:27.234+05:30  INFO 29824 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:34:27.495+05:30  INFO 29824 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:34:27.515+05:30  INFO 29824 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:34:27.660+05:30  INFO 29824 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:34:27.661+05:30  INFO 29824 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:34:28.579+05:30  INFO 29824 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:34:28.636+05:30  INFO 29824 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:34:30.268+05:30  INFO 29824 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:34:30.852+05:30  INFO 29824 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 6.113 seconds (process running for 7.156)
+2025-11-22T16:34:31.427+05:30  INFO 29824 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:34:31.430+05:30  INFO 29824 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:34:31.432+05:30  INFO 29824 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:37:51.852+05:30  INFO 29208 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 29208 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:37:51.858+05:30  INFO 29208 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:37:53.019+05:30  INFO 29208 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:37:53.149+05:30  INFO 29208 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interface.
+2025-11-22T16:37:53.958+05:30  INFO 29208 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:37:54.035+05:30  INFO 29208 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:37:54.068+05:30  INFO 29208 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:37:54.324+05:30  INFO 29208 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:37:54.347+05:30  INFO 29208 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:37:54.502+05:30  INFO 29208 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:37:54.504+05:30  INFO 29208 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:37:55.352+05:30  INFO 29208 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:37:55.408+05:30  INFO 29208 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:37:56.839+05:30  INFO 29208 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:37:57.624+05:30  INFO 29208 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 6.148 seconds (process running for 7.059)
+2025-11-22T16:37:58.180+05:30  INFO 29208 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:37:58.182+05:30  INFO 29208 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:37:58.186+05:30  INFO 29208 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:38:04.390+05:30  INFO 18424 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 18424 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:38:04.395+05:30  INFO 18424 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:38:05.303+05:30  INFO 18424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:38:05.414+05:30  INFO 18424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 1 JPA repository interface.
+2025-11-22T16:38:06.157+05:30  INFO 18424 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:38:06.228+05:30  INFO 18424 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:38:06.268+05:30  INFO 18424 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:38:06.479+05:30  INFO 18424 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:38:06.499+05:30  INFO 18424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:38:06.649+05:30  INFO 18424 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:38:06.651+05:30  INFO 18424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:38:07.382+05:30  INFO 18424 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:38:07.432+05:30  INFO 18424 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:38:08.666+05:30  INFO 18424 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:38:09.431+05:30  INFO 18424 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:38:09.444+05:30  INFO 18424 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.484 seconds (process running for 5.843)
+2025-11-22T16:38:31.849+05:30  INFO 21248 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 21248 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:38:31.855+05:30  INFO 21248 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:38:32.802+05:30  INFO 21248 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:38:32.913+05:30  INFO 21248 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interface.
+2025-11-22T16:38:33.656+05:30  INFO 21248 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:38:33.727+05:30  INFO 21248 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:38:33.765+05:30  INFO 21248 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:38:34.009+05:30  INFO 21248 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:38:34.031+05:30  INFO 21248 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:38:34.165+05:30  INFO 21248 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:38:34.167+05:30  INFO 21248 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:38:34.887+05:30  INFO 21248 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:38:34.935+05:30  INFO 21248 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:38:36.172+05:30  INFO 21248 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:38:36.887+05:30  INFO 21248 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:38:36.898+05:30  INFO 21248 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.479 seconds (process running for 5.839)
+2025-11-22T16:39:03.625+05:30  INFO 26944 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 26944 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:39:03.630+05:30  INFO 26944 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:39:04.584+05:30  INFO 26944 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:39:04.698+05:30  INFO 26944 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interface.
+2025-11-22T16:39:05.422+05:30  INFO 26944 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:39:05.494+05:30  INFO 26944 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:39:05.533+05:30  INFO 26944 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:39:05.780+05:30  INFO 26944 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:39:05.804+05:30  INFO 26944 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:39:05.953+05:30  INFO 26944 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:39:05.955+05:30  INFO 26944 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:39:06.694+05:30  INFO 26944 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:39:06.744+05:30  INFO 26944 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:39:07.945+05:30  INFO 26944 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:39:08.603+05:30  INFO 26944 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:39:08.613+05:30  INFO 26944 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.42 seconds (process running for 5.781)
+2025-11-22T16:39:11.913+05:30  INFO 26944 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 480 ms
+2025-11-22T16:41:14.351+05:30  INFO 25372 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 25372 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:41:14.357+05:30  INFO 25372 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:41:15.270+05:30  INFO 25372 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:41:15.384+05:30  INFO 25372 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
+2025-11-22T16:41:15.994+05:30  INFO 25372 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:41:16.067+05:30  INFO 25372 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:41:16.097+05:30  INFO 25372 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:41:16.330+05:30  INFO 25372 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:41:16.353+05:30  INFO 25372 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:41:16.487+05:30  INFO 25372 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:41:16.489+05:30  INFO 25372 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:41:17.258+05:30  INFO 25372 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:41:17.313+05:30  INFO 25372 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:41:18.737+05:30  INFO 25372 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:41:19.397+05:30  INFO 25372 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.35 seconds (process running for 6.225)
+2025-11-22T16:41:19.946+05:30  INFO 25372 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:41:19.948+05:30  INFO 25372 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:41:19.951+05:30  INFO 25372 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:41:30.916+05:30  INFO 31204 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 31204 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:41:30.922+05:30  INFO 31204 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:41:32.100+05:30  INFO 31204 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:41:32.218+05:30  INFO 31204 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interface.
+2025-11-22T16:41:33.137+05:30  INFO 31204 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:41:33.213+05:30  INFO 31204 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:41:33.261+05:30  INFO 31204 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:41:33.630+05:30  INFO 31204 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:41:33.666+05:30  INFO 31204 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:41:33.927+05:30  INFO 31204 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:41:33.931+05:30  INFO 31204 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:41:35.278+05:30  INFO 31204 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:41:35.363+05:30  INFO 31204 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:41:37.301+05:30  INFO 31204 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:41:38.973+05:30  INFO 31204 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:41:38.997+05:30  INFO 31204 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 8.598 seconds (process running for 9.051)
+2025-11-22T16:41:40.115+05:30  INFO 31204 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 548 ms
+2025-11-22T16:42:03.860+05:30  INFO 29632 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 29632 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:42:03.867+05:30  INFO 29632 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:42:04.982+05:30  INFO 29632 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:42:05.118+05:30  INFO 29632 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interface.
+2025-11-22T16:42:06.043+05:30  INFO 29632 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:42:06.117+05:30  INFO 29632 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:42:06.162+05:30  INFO 29632 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:42:06.453+05:30  INFO 29632 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:42:06.495+05:30  INFO 29632 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:42:06.668+05:30  INFO 29632 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:42:06.670+05:30  INFO 29632 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:42:07.569+05:30  INFO 29632 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:42:07.630+05:30  INFO 29632 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:42:08.954+05:30  INFO 29632 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:42:09.744+05:30  INFO 29632 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:42:09.757+05:30  INFO 29632 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 6.48 seconds (process running for 6.985)
+2025-11-22T16:42:14.514+05:30  INFO 29632 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 510 ms
+2025-11-22T16:43:18.191+05:30  INFO 22408 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Starting OrderMgmtApplicationTests using Java 21.0.9 with PID 22408 (started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:43:18.196+05:30  INFO 22408 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:43:19.165+05:30  INFO 22408 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:43:19.281+05:30  INFO 22408 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interface.
+2025-11-22T16:43:19.991+05:30  INFO 22408 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:43:20.055+05:30  INFO 22408 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:43:20.086+05:30  INFO 22408 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:43:20.314+05:30  INFO 22408 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:43:20.335+05:30  INFO 22408 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:43:20.472+05:30  INFO 22408 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:43:20.473+05:30  INFO 22408 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:43:21.259+05:30  INFO 22408 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:43:21.310+05:30  INFO 22408 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:43:22.506+05:30  INFO 22408 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:43:23.041+05:30  INFO 22408 --- [order-mgmt] [main] s.m.j.c.e.o.OrderMgmtApplicationTests    : Started OrderMgmtApplicationTests in 5.145 seconds (process running for 6.015)
+2025-11-22T16:43:23.508+05:30  INFO 22408 --- [order-mgmt] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:43:23.510+05:30  INFO 22408 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-22T16:43:23.512+05:30  INFO 22408 --- [order-mgmt] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-22T16:43:31.379+05:30  INFO 29424 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Starting OrderMgmtApplication using Java 21.0.9 with PID 29424 (C:\Users\Karthik\Documents\hcl\order-mgmt\target\classes started by Karthik in C:\Users\Karthik\Documents\hcl\order-mgmt)
+2025-11-22T16:43:31.384+05:30  INFO 29424 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-11-22T16:43:32.343+05:30  INFO 29424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-22T16:43:32.457+05:30  INFO 29424 --- [order-mgmt] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interface.
+2025-11-22T16:43:33.222+05:30  INFO 29424 --- [order-mgmt] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-22T16:43:33.290+05:30  INFO 29424 --- [order-mgmt] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2025-11-22T16:43:33.338+05:30  INFO 29424 --- [order-mgmt] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-22T16:43:33.591+05:30  INFO 29424 --- [order-mgmt] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-22T16:43:33.612+05:30  INFO 29424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-22T16:43:33.773+05:30  INFO 29424 --- [order-mgmt] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ewalletdb user=SA
+2025-11-22T16:43:33.775+05:30  INFO 29424 --- [order-mgmt] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-22T16:43:34.513+05:30  INFO 29424 --- [order-mgmt] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-22T16:43:34.562+05:30  INFO 29424 --- [order-mgmt] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-22T16:43:35.714+05:30  INFO 29424 --- [order-mgmt] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2025-11-22T16:43:36.386+05:30  INFO 29424 --- [order-mgmt] [main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8081
+2025-11-22T16:43:36.398+05:30  INFO 29424 --- [order-mgmt] [main] s.m.j.c.e.order.OrderMgmtApplication     : Started OrderMgmtApplication in 5.46 seconds (process running for 5.976)
+2025-11-22T16:43:38.880+05:30  INFO 29424 --- [order-mgmt] [reactor-http-nio-6] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 505 ms

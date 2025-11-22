@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: order-mgmt
+  datasource:
+    url: jdbc:h2:mem:ewalletdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    com.ewallet.order: DEBUG
+  file:
+    name: logs/order-mgmt.log
+
+server:
+  port: 8081
